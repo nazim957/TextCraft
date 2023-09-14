@@ -42,32 +42,32 @@ function App() {
       setMode('dark')
       document.body.style.backgroundColor='#042743'
       showAlert("Dark mode has been enabled", "success")
-      // document.title = 'TextUtils - Dark Mode'
+      // document.title = 'TextCraft - Dark Mode'
       // setInterval(()=>{
-      //   document.title = 'TextUtils is Amazing'
+      //   document.title = 'TextCraft is Amazing'
       // },2000)
       // setInterval(()=>{
-      //   document.title = 'Install TextUtils Now'
+      //   document.title = 'Install TextCraft Now'
       // },1500)
     }
     else if(mode ==='dark'){
       setMode('light')
       document.body.style.backgroundColor='white'
       showAlert("Light mode has been enabled", "success")
-      // document.title = 'TextUtils - Light Mode'
+      // document.title = 'TextCraft - Light Mode'
     }
   }
 
   return (
     <>
-    <Navbar title="TextUtils" mode={mode}  toggleMode={toggleMode} aboutText="About TextUtils"/>
+    <Navbar title="TextCraft" mode={mode}  toggleMode={toggleMode} aboutText="About TextCraft"/>
     
     <div className="container my-3">
     <Alert alert={alert}/>
     <Routes>
     
       <Route path='/' 
-      element= {<TextForm showAlert={showAlert} heading="Try TextUtils - Word Counter, Charecter Counter, Remove extra spaces" mode={mode}/>}>
+      element= {<TextForm showAlert={showAlert} heading="Try TextCraft - Word Counter, Charecter Counter, Remove extra spaces" mode={mode}/>}>
       </Route>
    <Route path='/about' element={  <About mode={mode}/> }></Route>
    
